@@ -1,0 +1,26 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+
+<h1 class="mb-5">REGISTRAR COMISION!!</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'comisionFormulario' %}" method="POST"> {% csrf_token %}
+    <br>
+    
+    <table>
+    
+        {{ miFormulario.as_table }}
+    
+    </table>
+    <br>
+    <input type="submit" value="Registrar">
+
+</form>
+
+{% endblock %}

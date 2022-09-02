@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+
+<h1 class="mb-5">RESULTADO DE BUSQUEDA DEL ENTREGABLE!!</h1>
+
+{% endblock %}
+
+{% block contenido %}
+<br>
+{% if mensaje %}
+    <h2>{{ mensaje }}</h2>
+{% else %}
+{% for desafio in entregable %}
+
+    <h2>Nombre: {{ desafio.nombre }}</h2>
+    <h2>Fecha de Entrega: {{ desafio.fecha_entrega }}</h2>
+    <h2>Entregado: {{ desafio.entregado }}</h2>
+    
+{% endfor %}
+{% endif %}
+
+<h1 style="color: red;">{{ respuesta }}</h1>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+
+<h1 class="mb-5">BUSQUEDA DE COMISION!!</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'buscarComision' %}" method="GET"> {% csrf_token %}
+    <br>
+
+    <label><strong>Comision: </strong><input type="number" name="comision" id="comision"></label>
+    
+    <input type="submit" value="Buscar">
+    
+</form>
+
+
+{% endblock %}

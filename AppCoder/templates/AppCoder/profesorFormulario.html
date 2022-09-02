@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+<!--ACA STATIC ESTA INVOCANDO EL CSS DE LA CARPETA STATIC, 
+    NOSOTROS LO PODEMOS CAMBIAR Y 
+    AGREGAR MAS CSS EN LA CARPETAA Y 
+    OBVIAMENTE ESPECIFICAR EL NOMBRE
+-->
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+
+<h1 class="mb-5">REGISTRAR PROFESOR!!</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'profesorFormulario' %}" method="POST"> {% csrf_token %}
+    <br>
+    <table>
+    
+        {{ miFormulario.as_table }}
+    
+    </table>
+    <br>
+    <input type="submit" value="Registrar">
+
+</form>
+
+{% endblock %}

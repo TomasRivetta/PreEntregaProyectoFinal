@@ -1,0 +1,28 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+
+<h1 class="mb-5">RESULTADO DE BUSQUEDA DE PROFESOR!!</h1>
+
+{% endblock %}
+
+{% block contenido %}
+<br>
+{% if mensaje %}
+    <h2>{{ mensaje }}</h2>
+{% else %}
+{% for profe in profesor %}
+
+    <h2>Nombre: {{ profe.nombre }}</h2>
+    <h2>Apellido: {{ profe.apellido }}</h2>
+    <h2>Mail: {{ profe.email }}</h2>
+    <h2>Profesion: {{ profe.profesion }}</h2>
+
+{% endfor %}
+{% endif %}
+
+<h1 style="color: red;">{{ respuesta }}</h1>
+
+{% endblock %}

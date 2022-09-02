@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+
+<h1 class="mb-5">BUSQUEDA DE ENTREGABLES!!</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'buscarEntregables' %}" method="GET"> {% csrf_token %}
+    <br>
+
+    <label><strong>Nombre Entregable: </strong><input type="text" name="nombre" id="nombre"></label>
+    
+    <input type="submit" value="Buscar">
+    
+</form>
+
+
+{% endblock %}
