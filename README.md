@@ -1,6 +1,6 @@
 # PreEntregaProyectoFinal
 
-# Pasos para probar la PreEntrega:
+### Pasos para probar la PreEntrega:
 
   1) Ejecutar el servidor.
   2) En la barra de navegacion, despues de la URL agrego " /AppCoder/ ".
